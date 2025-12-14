@@ -1,0 +1,173 @@
+.profile-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+    font-family: Arial, sans-serif;
+}
+
+.profile-header {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.profile-card {
+    background-color: #1f2937;
+    color: #f9fafb;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+.profile-icon-large {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: #3b82f6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.profile-name {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 0.3rem;
+}
+
+.profile-role {
+    font-size: 0.9rem;
+    color: #9ca3af;
+    margin-bottom: 1rem;
+}
+
+.profile-details-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.detail-item {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.detail-label {
+    font-weight: 500;
+    color: #9ca3af;
+}
+
+.detail-value {
+    font-weight: 600;
+    color: #f3f4f6;
+}
+
+.edit-profile-btn, .cancel-btn {
+    width: 100%;
+    padding: 0.75rem;
+    font-weight: 700;
+    border: none;
+    border-radius: 0.3rem;
+    cursor: pointer;
+    margin-top: 0.5rem;
+    transition: background-color 0.3s;
+}
+
+.edit-profile-btn {
+    background-color: #f59e0b;
+    color: white;
+}
+
+.edit-profile-btn:hover {
+    background-color: #d97706;
+}
+
+.cancel-btn {
+    background-color: #6b7280;
+    color: white;
+}
+
+.cancel-btn:hover {
+    background-color: #4b5563;
+}
+
+/* Edit form inputs */
+.edit-profile-form input {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 0.75rem;
+    border-radius: 0.3rem;
+    border: 1px solid #374151;
+    background-color: #111827;
+    color: #f9fafb;
+}
+
+.edit-profile-form label {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 0.2rem;
+}
+
+.form-message {
+    margin-bottom: 0.5rem;
+    color: #f87171; /* red */
+    font-weight: 600;
+}
+
+
+
+/* ------------------- PROFILE MOBILE RESPONSIVE ------------------- */
+@media (max-width: 768px) {
+    .profile-container {
+        padding: 1rem;
+    }
+
+    .profile-header {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    .profile-card {
+        padding: 1rem;
+    }
+
+    .profile-icon-large {
+        width: 60px;
+        height: 60px;
+        margin: 0 auto 1rem auto;
+    }
+
+    .profile-name {
+        font-size: 1.2rem;
+        text-align: center;
+    }
+
+    .profile-role {
+        font-size: 0.8rem;
+        text-align: center;
+    }
+
+    .profile-details-grid {
+        grid-template-columns: 1fr; /* stack vertically */
+        gap: 0.75rem 0;
+    }
+
+    .edit-profile-btn,
+    .cancel-btn {
+        width: 100%;
+        font-size: 0.9rem;
+        padding: 0.5rem;
+    }
+
+    .edit-profile-form input {
+        font-size: 0.9rem;
+        padding: 0.4rem;
+    }
+
+    .form-message {
+        font-size: 0.85rem;
+    }
+}

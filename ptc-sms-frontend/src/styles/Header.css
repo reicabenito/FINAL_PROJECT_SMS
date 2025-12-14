@@ -1,0 +1,135 @@
+/* src/styles/Header.css */
+
+.app-header {
+    background-color: var(--color-card-bg); /* Use the card background color */
+    padding: 1rem 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.header-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--color-primary-green);
+    text-decoration: none;
+}
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--color-text-light);
+}
+
+.nav-desktop {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.nav-link {
+    color: var(--color-text-light);
+    text-decoration: none;
+    transition: color 0.3s;
+    font-weight: 600;
+}
+
+.nav-link:hover {
+    color: var(--color-primary-green);
+}
+
+.btn {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.6rem 1rem;
+    border-radius: 0.375rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.btn-login {
+    background-color: var(--color-primary-blue);
+    color: white;
+}
+
+.btn-login:hover {
+    background-color: #1d4ed8; /* Darker blue */
+}
+
+.btn-register {
+    background-color: transparent;
+    border: 1px solid var(--color-primary-green);
+    color: var(--color-primary-green);
+}
+
+.btn-register:hover {
+    background-color: rgba(16, 185, 129, 0.1); /* Green tint */
+}
+/* src/styles/Header.css (Add these new styles) */
+
+/* Styles for links with icons (Logged In User Links) */
+.nav-link-icon {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    color: var(--color-text-light);
+    text-decoration: none;
+    transition: color 0.3s;
+    font-weight: 600;
+}
+
+.nav-link-icon:hover {
+    color: var(--color-primary-green);
+}
+
+.btn-logout {
+    background-color: #ef4444; /* Red 500 */
+    color: white;
+    border: none;
+}
+
+.btn-logout:hover {
+    background-color: #dc2626; /* Darker red */
+}
+/* Ensure .nav-desktop on large screens uses flex for icon alignment */
+@media (max-width: 768px) {
+  .nav-toggle {
+    display: block;
+  }
+
+  .nav-desktop {
+    display: none; /* hide by default */
+    flex-direction: column;
+    gap: 1rem;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: var(--color-card-bg);
+    padding: 1rem 0;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+  }
+
+  .nav-desktop.active {
+    display: flex;
+  }
+
+  .nav-link-icon {
+    padding: 0.5rem 1.5rem;
+  }
+}
+
+/* Ensure main content does not get hidden under navbar */
+.main-content {
+  padding-top: 70px; /* adjust to your navbar height */
+}

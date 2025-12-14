@@ -1,0 +1,264 @@
+/* CreateEvent Form Styles */
+
+/* Form container */
+.create-event-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  background: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+  font-family: Arial, sans-serif;
+}
+
+/* Form labels */
+.create-event-form label {
+  font-weight: 500;
+  color: #374151;
+  display: flex;
+  flex-direction: column;
+  font-size: 0.95rem;
+}
+
+/* Input, textarea, select fields */
+.create-event-form input,
+.create-event-form textarea,
+.create-event-form select {
+  margin-top: 0.4rem;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #d1d5db;
+  border-radius: 5px;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.create-event-form input:focus,
+.create-event-form textarea:focus,
+.create-event-form select:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2);
+}
+
+/* Textarea */
+.create-event-form textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+/* Submit Button */
+.create-event-form button {
+  background-color: #3b82f6;
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 5px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  font-size: 1rem;
+}
+
+.create-event-form button:hover {
+  background-color: #2563eb;
+}
+
+.create-event-form button:disabled {
+  background-color: #93c5fd;
+  cursor: not-allowed;
+}
+
+/* Error message */
+.create-event-form .error-message {
+  color: #dc2626;
+  background-color: #fee2e2;
+  padding: 0.5rem;
+  border-radius: 5px;
+  font-size: 0.9rem;
+}
+/* --- New Styles for Create Event Form Layout (Matching Image) --- */
+
+.create-event-section-wrapper {
+    background: #1f2937; /* Dark background for the whole section */
+    color: #ffffff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.create-event-section-wrapper h2 {
+    color: #ffffff;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.create-event-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 0;
+    background: none; /* Override existing form styles */
+    box-shadow: none;
+    max-width: none;
+    margin: 0;
+}
+
+/* Flex layout for form rows */
+.form-row {
+    display: flex;
+    gap: 1rem; /* Space between fields */
+}
+
+/* Ensure all labels/inputs take equal space in a row */
+.form-row label {
+    flex: 1; 
+    min-width: 0; /* Allows flex-item to shrink */
+}
+
+/* Full width field for description, etc. */
+.form-row-full {
+    display: flex;
+    gap: 1rem;
+}
+
+.form-row-full .label-half {
+     flex: 1;
+}
+
+/* Custom styles for the dark theme inputs */
+.create-event-form label {
+    font-weight: 400;
+    color: #d1d5db; /* Light gray label text */
+    font-size: 0.9rem;
+}
+
+.create-event-form input,
+.create-event-form select,
+.create-event-form textarea {
+    background-color: #374151; /* Dark input background */
+    color: #f3f4f6; /* Light input text */
+    border: 1px solid #4b5563; /* Darker border */
+    padding: 0.6rem 0.75rem;
+    margin-top: 0.3rem;
+}
+
+.create-event-form input:focus,
+.create-event-form select:focus,
+.create-event-form textarea:focus {
+    border-color: #60a5fa; /* Blue focus ring */
+    box-shadow: 0 0 0 1px #60a5fa;
+}
+
+/* Create button styling (matching the green in the image) */
+.create-event-form .create-btn {
+    background-color: #10b981; /* Green color from image */
+    color: #ffffff;
+    border-radius: 4px;
+    padding: 0.6rem 1rem;
+    font-size: 1rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    max-width: 250px; /* Constrain button width */
+    margin-top: 1rem;
+}
+
+.create-event-form .create-btn:hover {
+    background-color: #059669;
+}
+
+
+/* --- Existing styles for Admin Table Area (Adjusted for dark theme visibility) --- */
+.admin-page {
+    /* Assuming a dark background for the whole page */
+    background-color: #0f172a;
+    color: #e5e7eb;
+    padding: 2rem;
+    min-height: 100vh;
+}
+
+.data-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    background-color: #1f2937; /* Dark table background */
+}
+
+.data-table th, .data-table td {
+    border-bottom: 1px solid #374151; /* Dark border line */
+    padding: 12px 15px;
+    text-align: left;
+    color: #f3f4f6;
+}
+
+.data-table th {
+    background-color: #374151; /* Darker header background */
+    color: #9ca3af;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+}
+
+/* Status Badges */
+.status-badge {
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.status-active {
+    background-color: #065f46;
+    color: #a7f3d0;
+}
+.status-completed {
+    background-color: #1f2937;
+    color: #9ca3af;
+}
+.status-upcoming {
+    background-color: #92400e;
+    color: #fcd34d;
+}
+
+/* Action Buttons */
+.btn-icon {
+    background: #374151;
+    border: none;
+    color: #d1d5db;
+    padding: 8px;
+    margin-left: 5px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+    line-height: 1;
+}
+
+.btn-icon:hover {
+    background: #4b5563;
+}
+
+.btn-delete {
+    color: #f87171;
+}
+
+.btn-delete:hover {
+    background: #4b5563;
+    color: #ef4444;
+}
+
+.filter-row {
+    background-color: #1f2937;
+    padding: 1rem 1.5rem;
+    border-bottom: 1px solid #374151;
+    display: flex;
+    align-items: center;
+    color: #9ca3af;
+}

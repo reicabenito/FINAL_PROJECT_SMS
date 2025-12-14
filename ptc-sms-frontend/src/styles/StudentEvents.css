@@ -1,0 +1,206 @@
+.events-container {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.events-header {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+
+.events-subtitle {
+    text-align: center;
+    color: #6b7280;
+    margin-bottom: 2rem;
+}
+
+.event-list-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+.event-card {
+    background-color: #1f2937;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.event-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+}
+
+.event-image {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 12px;
+}
+
+.event-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+    color: #ef4444; /* red emphasis */
+}
+
+.event-details {
+    /* --- GENERAL DETAILS FONT SIZE INCREASE --- */
+    font-size: 1.1rem; /* Increased size for Date, Time, Location, Organizer */
+    color: #e9f2ff;
+    margin-bottom: 1rem; 
+}
+
+.organizer {
+    font-style: italic;
+    margin-bottom:20px;
+}
+
+/* --- REMOVING ALL HIGHLIGHTS --- */
+
+/* Resetting the wrapper to have a transparent background and no extra spacing/padding */
+.status-line-wrapper,
+.status-line-wrapper-active,
+.status-line-wrapper-tba,
+.status-line-wrapper-cancelled,
+.status-line-wrapper-completed {
+    display: block; 
+    background-color: transparent !important;
+    padding: 0;
+    margin: 0;
+}
+
+/* Ensure the <p> element inside the wrapper has no background and takes up full space */
+.status-line-wrapper > p {
+    background-color: transparent !important; 
+    margin: 0; 
+    padding: 0; 
+    width: 100%;
+}
+/* --- END REMOVING ALL HIGHLIGHTS --- */
+
+
+/* Status text only */
+.status-label {
+    /* --- STATUS FONT SIZE INCREASE --- */
+    font-size: 20px; /* Further increased size for Status text */
+    font-weight: 600;
+    /* --- END STATUS FONT SIZE INCREASE --- */
+}
+
+/* Status text colors - original colors */
+.status-active { 
+    color: #10b95c; /* green */
+}
+.status-tba { 
+    color: #f59e0b; /* yellow/orange */
+}
+.status-cancelled { 
+    color: #ef4444; /* red */
+}
+.status-completed { 
+    color: #6b7280; /* gray */
+}
+
+/* --- Buttons (MODIFIED TO MATCH IMAGE) --- */
+
+/* Base style for all buttons */
+.btn-register {
+    padding: 0.75rem 1.25rem; /* Slightly larger padding for better fit */
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 1.1rem;
+    
+    /* New dark background and green border/text */
+    border: 2px solid #345b49; /* Green outline/border */
+    color: #39a573; /* Green text color */
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    transition: background-color 0.3s, border-color 0.3s, color 0.3s;
+    margin-top: 1rem;
+}
+
+/* Hover style for active "Register Now" button */
+.btn-register:hover:not(:disabled) {
+    background-color: #2bb069; /* Green background on hover */
+    color: #1a1e27; /* Dark text on hover */
+    border-color: #169b50; /* Maintain green border */
+}
+
+/* Disabled button for TBA / Cancelled / Completed status */
+.btn-disabled,
+.btn-completed {
+    background-color: #374151; /* Darker gray background */
+    border: 2px solid #9ca3af; /* Gray border */
+    color: #9ca3af; /* Light gray text */
+    cursor: not-allowed;
+    pointer-events: none; /* Ensure no hover effect on disabled */
+}
+
+/* Registered button (Green fill, dark text) */
+.btn-registered {
+    background-color: #02e10d; /* Green background */
+    border-color: #ededed;
+    color: #1a1e27; /* Dark text */
+    cursor: default;
+    pointer-events: none; /* Ensure no hover effect */
+}
+
+/* Styling for the CheckCircle icon in the button (Registered) */
+.btn-registered svg {
+    color: #375f43; /* Make the icon color match the text */
+}
+
+/* Styling for the icon in the "Register Now" button */
+.btn-register > svg {
+    color: #ff0000; /* Green icon color */
+}
+
+
+
+/* ------------------- MOBILE RESPONSIVE ------------------- */
+@media (max-width: 768px) {
+    .dashboard-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    .section-checkin,
+    .section-stats,
+    .section-announcements {
+        grid-column: auto;
+        width: 100%;
+    }
+    .announcement-list li {
+        width: 100%;
+        height: auto;
+        padding: 1rem;
+    }
+    .participation-grid {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    .event-bar-item {
+        width: 100%;
+    }
+    .dashboard-welcome {
+        font-size: 2rem;
+    }
+    .dashboard-subtitle,
+    .section-title {
+        font-size: 1rem;
+    }
+}
